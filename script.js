@@ -1,6 +1,8 @@
 const results = document.querySelector(".content");
 const humanChoice = document.querySelectorAll("button");
 
+const humanOutput = document.querySelector(".human");
+const computerOutput = document.querySelector(".computer");
 // calls an event listener for each button choices
 let choice;
 humanChoice.forEach(element => {
@@ -127,6 +129,8 @@ function playRound(userSelection, computerSelection) {
             appendChild(results, scissorsBeatPaper)
         }
     }
+    humanOutput.textContent = humanScore;
+    computerOutput.textContent = computerScore;
     //Checks which score is larger
     if (humanScore >= 5 || computerScore >= 5) {
         if (humanScore === computerScore) {
@@ -143,12 +147,15 @@ function playRound(userSelection, computerSelection) {
         //Times out and resets game
         setTimeout(() => {
             resetGame();
-        }, 3000);
+        }, 4000);
     }
+
 
 }
 function resetGame() {
     results.replaceChildren();
+    humanOutput.replaceChildren();
+    computerOutput.replaceChildren();
     humanScore = 0;
     computerScore = 0;
 
