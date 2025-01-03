@@ -6,6 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     gap: 40px;
+    overflow: hidden;
 }
 h1 {
     top: 0px;
@@ -28,6 +29,13 @@ button {
     border-radius: 15px;
     box-shadow: 11px 6px black;
 }
+.container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+}
 .content{
     border: 5px dashed;
     display: flex;
@@ -36,7 +44,6 @@ button {
     align-items: center;
     margin-top: 10%;
     overflow-y: auto;
-    flex-shrink: 1;
     max-height: 50px; 
     scroll-behavior: smooth;
     
@@ -49,4 +56,11 @@ button {
     font-weight:bolder;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     justify-content: space-between;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
