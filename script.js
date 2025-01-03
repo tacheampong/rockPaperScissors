@@ -1,4 +1,4 @@
-const results = document.querySelector("div");
+const results = document.querySelector(".content");
 // const humanChoice = document.querySelectorAll("button");
 const humanChoice = document.querySelectorAll("button");
 let choice;
